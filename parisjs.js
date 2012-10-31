@@ -35,16 +35,16 @@
       for (; i < l; i++) {
         line = lines[i];
 
-        if (line.match(/^[Nn]odedef>/)) {
+        if (line.match(/^nodedef>/i)) {
           // Detect node attributes
           parsingNodes = true;
-          nodeAttributes = line.replace(/^[Nn]odedef>/, '').split(/,/g).map(function(s) {
+          nodeAttributes = line.replace(/^nodedef>/i, '').split(/,/g).map(function(s) {
             return s.replace(/ .*/, '');
           });
-        } else if (line.match(/^[Ee]dgedef>/)) {
+        } else if (line.match(/^edgedef>/i)) {
           // Detect edge attributes
           parsingEdges = true;
-          edgeAttributes = line.replace(/^[Ee]dgedef>/, '').split(/,/g).map(function(s) {
+          edgeAttributes = line.replace(/^edgedef>/i, '').split(/,/g).map(function(s) {
             return s.replace(/ .*/, '');
           });
         } else if (parsingEdges) {
