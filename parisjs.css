@@ -1,0 +1,15 @@
+body {
+  background-color: #eee;
+}
+div#container {
+  box-shadow: 0px 2px 8px #333;
+  -moz-box-shadow: 0px 2px 8px #333;
+  -webkit-box-shadow: 0px 2px 8px #333;
+  background-color: #fff;
+  position: absolute;
+  width: 900px;
+  height: 90%;
+  margin-top: 5%;
+  margin-left: -450px;
+  left: 50%;
+}
