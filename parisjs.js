@@ -38,12 +38,14 @@
         if (line.match(/^nodedef>/i)) {
           // Detect node attributes
           parsingNodes = true;
+          parsingEdges = false;
           nodeAttributes = line.replace(/^nodedef>/i, '').split(/,/g).map(function(s) {
             return s.replace(/ .*/, '');
           });
         } else if (line.match(/^edgedef>/i)) {
           // Detect edge attributes
           parsingEdges = true;
+          parsingNodes = false;
           edgeAttributes = line.replace(/^edgedef>/i, '').split(/,/g).map(function(s) {
             return s.replace(/ .*/, '');
           });
